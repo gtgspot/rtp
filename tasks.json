@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/vscode-tasks",
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "test",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$vitest"
+      ],
+      "label": "npm: test",
+      "detail": "vitest",
+      "isBackground": true,
+      "runOptions": {
+        "runOn": "fileSave"
+      },
+      "presentation": {
+        "focus": false,
+        "panel": "shared",
+        "reveal": "silent",
+        "showReuseMessage": false,
+        "clear": false
+      }
+    }
+  ]
+}
