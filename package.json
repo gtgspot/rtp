@@ -1,16 +1,17 @@
 {
-  "name": "tgspot",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev",
-    "test": "vitest"
+  "name": "@cloudflare/workerd-linux-64",
+  "description": "👷 workerd for Linux 64-bit, Cloudflare's JavaScript/Wasm Runtime",
+  "repository": "https://github.com/cloudflare/workerd",
+  "license": "Apache-2.0",
+  "preferUnplugged": false,
+  "engines": {
+    "node": ">=16"
   },
-  "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "^0.5.2",
-    "wrangler": "^3.60.3",
-    "vitest": "2.0.5"
-  }
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "version": "1.20241106.1"
 }
