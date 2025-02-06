@@ -3,11 +3,7 @@
   "version": "0.3.4",
   "description": "Routes requests to KV assets",
   "keywords": [
-    "kv",
-    "cloudflare",
-    "workers",
-    "wrangler",
-    "assets"
+    "kv", "cloudflare", "workers", "wrangler", "assets", "next.js", "static", "vercel"
   ],
   "homepage": "https://github.com/cloudflare/workers-sdk#readme",
   "bugs": {
@@ -29,7 +25,10 @@
     "!dist/test"
   ],
   "dependencies": {
-    "mime": "^3.0.0"
+    "mime": "^3.0.0",
+    "next": "^13.0.0",  // Add Next.js dependency for static generation
+    "react": "^18.0.0", // Add React as a peer dependency for Next.js
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@ava/typescript": "^4.1.0",
@@ -38,7 +37,11 @@
     "@types/node": "20.8.3",
     "@types/service-worker-mock": "^2.0.1",
     "ava": "^6.0.1",
-    "service-worker-mock": "^2.0.5"
+    "service-worker-mock": "^2.0.5",
+    "eslint": "^8.18.0",
+    "typescript": "^5.0.4",  // Make sure TypeScript is up-to-date
+    "eslint-plugin-next": "^12.0.0",  // Add ESLint plugin for Next.js
+    "next-on-pages": "^1.0.0"  // Add Next.js deployment support on Cloudflare Pages
   },
   "engines": {
     "node": ">=16.13"
@@ -53,11 +56,16 @@
     "prerelease": true
   },
   "scripts": {
-    "build": "tsc -d",
+    "build": "next build && tsc -d",  // Build Next.js project and Worker assets
     "check:lint": "eslint .",
     "check:type": "tsc",
     "pretest": "npm run build",
     "test": "ava dist/test/*.js --verbose",
-    "test:ci": "npm run build && ava dist/test/*.js --verbose"
+    "test:ci": "npm run build && ava dist/test/*.js --verbose",
+    "start": "wrangler dev",  // Start Cloudflare Worker locally
+    "deploy": "wrangler publish",  // Deploy Cloudflare Worker
+    "next:dev": "next dev",  // Start Next.js development server
+    "next:build": "next build",  // Build the Next.js app
+    "next:start": "next start"  // Start Next.js in production mode
   }
 }
