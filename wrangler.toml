@@ -1,8 +1,15 @@
 #:schema node_modules/wrangler/config-schema.json
-name = "tgspot"
+name = "rtpworker"
 main = "src/index.js"
 compatibility_date = "2024-11-27"
 compatibility_flags = ["nodejs_compat"]
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
+
+
+
 
 # Workers Logs
 # Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
