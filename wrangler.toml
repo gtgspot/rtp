@@ -1,3 +1,5 @@
+# wrangler.toml
+name = 'rtpworker'
 #:schema node_modules/wrangler/config-schema.json
 name = "tgspot"
 main = "src/index.js"
