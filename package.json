@@ -23,7 +23,7 @@
     "dist"
   ],
   "dependencies": {
-    "mime": "^3.0.0",
+    "mime": "^4.0.7",
     "zod": "^3.22.3"
   },
   "devDependencies": {
