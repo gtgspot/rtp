@@ -1,3 +1,5 @@
+# wrangler.toml
+name = 'rtpworker'
 #:schema node_modules/wrangler/config-schema.json
 name = "rtpworker"
 main = "src/index.js"
