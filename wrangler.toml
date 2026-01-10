@@ -31,8 +31,11 @@ enabled = true
 # - https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
 # Note: Use secrets to store sensitive data.
 # - https://developers.cloudflare.com/workers/configuration/secrets/
-# [vars]
-# MY_VARIABLE = "production_value"
+[vars]
+# Predictive Modeling Disclaimer Framework Configuration
+DISCLAIMER_ENABLED = "true"
+DISCLAIMER_INCLUDE_IN_BODY = "false"
+DISCLAIMER_TEXT = "System generates probabilistic analytical outputs derived through proprietary algorithmic transformation of publicly licensed data. Results constitute statistical inference with inherent uncertainty. No representation of outcome certainty is expressed or implied. Intellectual property rights vest in computational methodology, not source materials."
 
 # Bind the Workers AI model catalog. Run machine learning models, powered by serverless GPUs, on Cloudflare’s global network
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#workers-ai
