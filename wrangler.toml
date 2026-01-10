@@ -1,8 +1,7 @@
 # wrangler.toml
-name = 'rtpworker'
-#:schema node_modules/wrangler/config-schema.json
 name = "rtpworker"
-main = "src/index.js"
+#:schema node_modules/wrangler/config-schema.json
+main = "index.js"
 compatibility_date = "2024-11-27"
 compatibility_flags = ["nodejs_compat"]
 
